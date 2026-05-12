@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1 - Планиметрия | Метод координат</title>
+    <link rel="stylesheet" href="../../style.css?v=5">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>📐 Задание 1</h1>
+            <p class="subtitle">Планиметрическая задача</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Главная</a></li>
+                <li><a href="../../tasks.html">📝 Задачи</a></li>
+                <li><a href="../../theory.html">📚 Теория</a></li>
+                <li><a href="../../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="back-button-container">
+                <a href="index.html" class="back-button">← Назад к списку заданий</a>
+            </div>
+
+            <div class="theory-full">
+                <div class="theory-block">
+                    <h2>📌 Когда применяется метод координат</h2>
+                    <ul>
+                        <li>Треугольники с заданными координатами вершин</li>
+                        <li>Параллелограммы, ромбы, трапеции</li>
+                        <li>Окружности и их элементы</li>
+                        <li>Задачи на нахождение расстояний, углов, площадей</li>
+                    </ul>
+                </div>
+
+                <div class="theory-block">
+                    <h2>⚙️ Алгоритм решения</h2>
+                    
+                    <h3>Шаг 1. Введение системы координат</h3>
+                    <ul>
+                        <li>Для прямоугольных фигур — начало в вершине, оси по сторонам</li>
+                        <li>Для ромба — оси по диагоналям</li>
+                        <li>Для окружности — начало в центре</li>
+                        <li>Для трапеции — начало в нижнем левом углу, ось X по основанию</li>
+                    </ul>
+
+                    <h3>Шаг 2. Запись координат точек</h3>
+                    <div class="formula-block">Середина отрезка: \(\displaystyle x = \frac{x_1 + x_2}{2},\; y = \frac{y_1 + y_2}{2}\)</div>
+                    <div class="formula-block">Деление отрезка в отношении \(\lambda\): \(\displaystyle x = \frac{x_1 + \lambda x_2}{1 + \lambda},\; y = \frac{y_1 + \lambda y_2}{1 + \lambda}\)</div>
+
+                    <h3>Шаг 3. Применение формул</h3>
+                    <div class="formula-block">Расстояние между точками: \(\displaystyle d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\)</div>
+                    <div class="formula-block">Площадь треугольника: \(\displaystyle S = \frac{1}{2} \left| (x_2 - x_1)(y_3 - y_1) - (x_3 - x_1)(y_2 - y_1) \right|\)</div>
+                    <div class="formula-block">Уравнение окружности: \((x - x_0)^2 + (y - y_0)^2 = R^2\)</div>
+                    <div class="formula-block">Координаты центра тяжести треугольника: \(\displaystyle x = \frac{x_1 + x_2 + x_3}{3},\; y = \frac{y_1 + y_2 + y_3}{3}\)</div>
+
+                    <h3>Шаг 4. Вычисление и ответ</h3>
+                    <p>Подставляем числа, упрощаем, записываем ответ.</p>
+                </div>
+
+                <div class="theory-block">
+                    <h2>📖 Пример</h2>
+                    <p><strong>Условие:</strong> Треугольник ABC с вершинами \(A(1;2), B(5;6), C(3;8)\). Найдите длину медианы \(AM\).</p>
+                    <p><strong>Решение:</strong><br>
+                    \(M\) — середина \(BC\): \(\displaystyle M\left(\frac{5+3}{2}; \frac{6+8}{2}\right) = (4;7)\)<br>
+                    \(\displaystyle AM = \sqrt{(4-1)^2 + (7-2)^2} = \sqrt{9 + 25} = \sqrt{34}\)</p>
+                    <p><strong>Ответ:</strong> \(\sqrt{34}\)</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

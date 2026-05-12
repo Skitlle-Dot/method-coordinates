@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Общий алгоритм - Метод координат</title>
+    <link rel="stylesheet" href="../style.css?v=6">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>📖 Общий алгоритм</h1>
+            <p class="subtitle">Пошаговая инструкция решения задач методом координат</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../tasks.html">📝 Задачи</a></li>
+                <li><a href="../theory.html">📚 Теория</a></li>
+                <li><a href="../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="back-button-container">
+                <a href="../theory.html" class="back-button">← Назад к теории</a>
+            </div>
+
+            <div class="theory-full">
+                <div class="theory-block">
+                    <h2>ШАГ 1. Введение системы координат</h2>
+                    <p>Выбираем начало координат и направления осей так, чтобы координаты ключевых точек были максимально простыми (чаще всего нулями).</p>
+                    
+                    <h3>Для разных фигур:</h3>
+                    <ul>
+                        <li><strong>Куб и прямоугольный параллелепипед:</strong> Начало координат в одной из вершин, оси направляем вдоль трёх взаимно перпендикулярных рёбер, исходящих из этой вершины.</li>
+                        <li><strong>Правильная четырёхугольная пирамида:</strong> Начало в центре основания, оси X и Y параллельно сторонам основания, ось Z — через вершину пирамиды.</li>
+                        <li><strong>Правильная треугольная призма:</strong> Ось Z вдоль боковых рёбер. В основании — правильный треугольник. Одну из его вершин помещаем в начало координат, ось X направляем вдоль стороны основания, ось Y — перпендикулярно ей (внутрь треугольника).</li>
+                        <li><strong>Ромб:</strong> Начало в точке пересечения диагоналей, оси направляем по диагоналям.</li>
+                        <li><strong>Окружность:</strong> Начало в центре окружности.</li>
+                        <li><strong>Трапеция:</strong> Начало в нижнем левом углу, ось X по основанию.</li>
+                    </ul>
+                </div>
+
+                <div class="theory-block">
+                    <h2>ШАГ 2. Определение координат ключевых точек</h2>
+                    <p>Когда оси выбраны, нужно найти координаты всех точек, упомянутых в условии задачи.</p>
+                    
+                    <h3>Что нужно найти:</h3>
+                    <ul>
+                        <li>вершины многогранников</li>
+                        <li>середины рёбер</li>
+                        <li>точки пересечения</li>
+                    </ul>
+                    
+                    <h3>Формулы:</h3>
+                    <div class="formula-block">Середина отрезка AB: \(\displaystyle x = \frac{x_1 + x_2}{2},\; y = \frac{y_1 + y_2}{2},\; z = \frac{z_1 + z_2}{2}\)</div>
+                    <div class="formula-block">Деление отрезка в отношении \(\lambda = \frac{AM}{MB}\): \(\displaystyle x = \frac{x_A + \lambda x_B}{1 + \lambda}\)</div>
+                    
+                    <h3>Источники данных:</h3>
+                    <ul>
+                        <li>заданные размеры фигуры (длины рёбер, высоты)</li>
+                        <li>отношения, в которых точки делят отрезки</li>
+                    </ul>
+                </div>
+
+                <div class="theory-block">
+                    <h2>ШАГ 3. Применение соответствующей геометрической формулы</h2>
+                    
+                    <h3>А. Задачи с прямыми</h3>
+                    <p><strong>Угол между прямыми:</strong></p>
+                    <div class="formula-block">\(\displaystyle \cos \varphi = \frac{|\vec{p} \cdot \vec{q}|}{|\vec{p}| \cdot |\vec{q}|}\)</div>
+                    <p>где \(\vec{p}, \vec{q}\) — направляющие векторы прямых.</p>
+                    
+                    <p><strong>Угол между прямой и плоскостью:</strong></p>
+                    <div class="formula-block">\(\displaystyle \sin \varphi = \frac{|\vec{a} \cdot \vec{n}|}{|\vec{a}| \cdot |\vec{n}|}\)</div>
+                    <p>где \(\vec{a}\) — направляющий вектор прямой, \(\vec{n}\) — нормаль плоскости.</p>
+                    
+                    <h3>Б. Задачи с плоскостями</h3>
+                    <p><strong>Уравнение плоскости через три точки:</strong></p>
+                    <p>Находим нормальный вектор \(\vec{n} = (A, B, C)\) как векторное произведение двух векторов в плоскости.</p>
+                    <div class="formula-block">\(Ax + By + Cz + D = 0\)</div>
+                    
+                    <p><strong>Угол между плоскостями:</strong></p>
+                    <div class="formula-block">\(\displaystyle \cos \varphi = \frac{|\vec{n_1} \cdot \vec{n_2}|}{|\vec{n_1}| \cdot |\vec{n_2}|}\)</div>
+                    
+                    <p><strong>Расстояние от точки до плоскости:</strong></p>
+                    <div class="formula-block">\(\displaystyle d = \frac{|Ax_0 + By_0 + Cz_0 + D|}{\sqrt{A^2 + B^2 + C^2}}\)</div>
+                </div>
+
+                <div class="theory-block">
+                    <h2>ШАГ 4. Вычисление и интерпретация результата</h2>
+                    <p>Выполняем все необходимые алгебраические операции: вычисляем координаты векторов, находим скалярные произведения, длины, решаем системы уравнений. Полученное число или выражение и будет ответом на геометрическую задачу.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

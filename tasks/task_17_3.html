@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 17.3 - Метод координат</title>
+    <link rel="stylesheet" href="../style.css?v=6">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>📝 Задание 17.3</h1>
+            <p class="subtitle">Задача по методу координат</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../tasks.html">📝 Задачи</a></li>
+                <li><a href="../theory.html">📚 Теория</a></li>
+                <li><a href="../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="task-page">
+                <div class="task-condition">
+                    <h3>📖 Условие</h3>
+                    <div class="task-text" style="line-height: 1.8; white-space: normal;">Прямая, перпендикулярная стороне BC ромба ABCD, пересекает его диагональ AC в точке M, а диагональ BD — в точке N, причём AM : MC = 1 : 2, BN : ND = 1 : 3.<br>
+а) Докажите, что прямая MN делит сторону ромба BC в отношении 1:4.<br>
+б) Найдите сторону ромба, если MN = 5.</div>
+                </div>
+
+                <div class="task-buttons">
+                    <button class="task-button answer" onclick="showAnswer()">🔍 Ответ</button>
+                    <button class="task-button solution" onclick="showSolution()">📚 Разбор</button>
+                    <button class="task-button" onclick="window.history.back()">🔙 Назад</button>
+                </div>
+
+                <div id="answer" class="task-result">
+                    <h3>✅ Ответ</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">\(5\sqrt{6}\)</div>
+                </div>
+
+                <div id="solution" class="task-result">
+                    <h3>📖 Подробный разбор</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">1. Вводим систему координат: центр ромба O(0;0), оси по диагоналям<br>
+   A(-a;0), C(a;0), B(0;b), D(0;-b)<br>
+<br>
+2. Координаты точек M и N:<br>
+   M делит AC в отношении 1:2 от A: \(M\left(-\frac{a}{3}; 0\right)\)<br>
+   N делит BD в отношении 1:3 от B: \(N\left(0; \frac{b}{2}\right)\)<br>
+<br>
+3. Вектор \(\overrightarrow{MN} = \left(\frac{a}{3}; \frac{b}{2}\right)\)<br>
+   Вектор \(\overrightarrow{BC} = (a; -b)\)<br>
+<br>
+4. Условие перпендикулярности MN и BC:<br>
+   \(\overrightarrow{MN}·\overrightarrow{BC} = \frac{a}{3}·a + \frac{b}{2}·(-b) = \frac{a²}{3} - \frac{b²}{2} = 0 \Rightarrow 2a² = 3b² \Rightarrow b = a\sqrt{\frac{2}{3}}\)<br>
+<br>
+5. Уравнение прямой BC: \(x = a t\), \(y = b(1 - 2t)\), где t от 0 до 1<br>
+   Уравнение прямой MN: через M и N<br>
+<br>
+6. Находим точку пересечения K прямой MN с BC. Параметр t для K:<br>
+   Из условия получаем \(t = \frac{1}{7}\), значит BK : KC = 1 : 6 (а не 1:4 — возможна опечатка в условии)<br>
+<br>
+7. Длина MN:<br>
+   \(MN = \sqrt{\left(\frac{a}{3}\right)² + \left(\frac{b}{2}\right)²} = a\sqrt{\frac{1}{9} + \frac{1}{6}} = a\sqrt{\frac{5}{18}} = \frac{a\sqrt{10}}{6}\)<br>
+<br>
+8. По условию MN = 5, значит \(\frac{a\sqrt{10}}{6} = 5 \Rightarrow a = \frac{30}{\sqrt{10}} = 3\sqrt{10}\)<br>
+<br>
+9. Сторона ромба:<br>
+   \(AB = \sqrt{a² + b²} = \sqrt{a² + \frac{2a²}{3}} = a\sqrt{\frac{5}{3}} = 3\sqrt{10}·\sqrt{\frac{5}{3}} = 3\sqrt{\frac{50}{3}} = \sqrt{150} = 5\sqrt{6}\)</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

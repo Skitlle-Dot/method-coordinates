@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 16 - Движение | Метод координат</title>
+    <link rel="stylesheet" href="../../style.css?v=3">
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>🚗 Задание 16</h1>
+            <p class="subtitle">Текстовые задачи на движение</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Главная</a></li>
+                <li><a href="../../tasks.html">📝 Задачи</a></li>
+                <li><a href="../../theory.html">📚 Теория</a></li>
+                <li><a href="../../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="back-button-container">
+                <a href="index.html" class="back-button">← Назад к списку заданий</a>
+            </div>
+
+            <div class="theory-full">
+                <div class="theory-block">
+                    <h2>📌 Когда применяется метод координат</h2>
+                    <ul>
+                        <li>Задачи на движение по плоскости</li>
+                        <li>Задачи с координатами движущихся объектов</li>
+                        <li>Нахождение минимального расстояния между объектами</li>
+                    </ul>
+                </div>
+
+                <div class="theory-block">
+                    <h2>⚙️ Алгоритм решения</h2>
+                    
+                    <h3>Шаг 1. Введение системы координат</h3>
+                    <p>Помещаем начальные точки в удобные координаты. Определяем направления движения.</p>
+
+                    <h3>Шаг 2. Параметрические уравнения движения</h3>
+                    <div class="formula-text">x₁(t) = x₁₀ + v₁ₓ·t, y₁(t) = y₁₀ + v₁ᵧ·t</div>
+                    <div class="formula-text">x₂(t) = x₂₀ + v₂ₓ·t, y₂(t) = y₂₀ + v₂ᵧ·t</div>
+
+                    <h3>Шаг 3. Расстояние между объектами</h3>
+                    <div class="formula-text">d²(t) = (x₁(t) − x₂(t))² + (y₁(t) − y₂(t))²</div>
+                    <p>Раскрываем скобки, получаем квадратичную функцию от t.</p>
+
+                    <h3>Шаг 4. Исследование на минимум</h3>
+                    <p><strong>Для квадратичной функции:</strong> минимум при t = −b/(2a) (если a > 0). Подставляем найденное t в формулу расстояния.</p>
+                    <p><strong>Для неквадратичных функций:</strong> находим производную, приравниваем к нулю, находим критические точки.</p>
+                </div>
+
+                <div class="theory-block">
+                    <h2>📖 Пример</h2>
+                    <p><strong>Условие:</strong> Два автомобиля выезжают из одной точки: первый на север со скоростью 40 км/ч, второй на восток со скоростью 30 км/ч. Найдите расстояние между ними через t часов.</p>
+                    <p><strong>Решение:</strong><br>
+                    x₁=0, y₁=40t, x₂=30t, y₂=0<br>
+                    d² = (0−30t)² + (40t−0)² = 900t² + 1600t² = 2500t² ⇒ d = 50t</p>
+                    <p><strong>Ответ:</strong> 50t км</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

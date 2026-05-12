@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Все формулы - Метод координат</title>
+    <link rel="stylesheet" href="../style.css?v=6">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>📐 Все формулы</h1>
+            <p class="subtitle">Полный справочник метода координат</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../tasks.html">📝 Задачи</a></li>
+                <li><a href="../theory.html">📚 Теория</a></li>
+                <li><a href="../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="back-button-container">
+                <a href="../theory.html" class="back-button">← Назад к теории</a>
+            </div>
+
+            <div class="theory-full">
+                <div class="theory-block">
+                    <h2>1. Векторы</h2>
+                    <div class="formula-block">\(\vec{AB} = \{x_B - x_A;\; y_B - y_A;\; z_B - z_A\}\)</div>
+                    <div class="formula-block">\(|\vec{a}| = \sqrt{x^2 + y^2 + z^2}\)</div>
+                    <div class="formula-block">\(\vec{a} \cdot \vec{b} = x_1x_2 + y_1y_2 + z_1z_2\)</div>
+                    <div class="formula-block">\(\vec{a} \perp \vec{b} \;\Leftrightarrow\; \vec{a} \cdot \vec{b} = 0\)</div>
+                    <div class="formula-block">\(\vec{a} \parallel \vec{b} \;\Leftrightarrow\; \frac{x_1}{x_2} = \frac{y_1}{y_2} = \frac{z_1}{z_2}\)</div>
+                </div>
+
+                <div class="theory-block">
+                    <h2>2. Расстояния и отрезки</h2>
+                    <div class="formula-block">\(d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2}\)</div>
+                    <div class="formula-block">\(x = \frac{x_1+x_2}{2},\; y = \frac{y_1+y_2}{2},\; z = \frac{z_1+z_2}{2}\)</div>
+                    <div class="formula-block">\(x_M = \frac{x_A + \lambda x_B}{1+\lambda},\; y_M = \frac{y_A + \lambda y_B}{1+\lambda},\; z_M = \frac{z_A + \lambda z_B}{1+\lambda}\)</div>
+                </div>
+
+                <div class="theory-block">
+                    <h2>3. Плоскость</h2>
+                    <div class="formula-block">\(Ax + By + Cz + D = 0\)</div>
+                    <div class="formula-block">\(\displaystyle d = \frac{|Ax_0 + By_0 + Cz_0 + D|}{\sqrt{A^2 + B^2 + C^2}}\)</div>
+                </div>
+
+                <div class="theory-block">
+                    <h2>4. Углы</h2>
+                    <div class="formula-block">\(\cos \varphi = \frac{|\vec{p} \cdot \vec{q}|}{|\vec{p}| \cdot |\vec{q}|}\) — угол между прямыми</div>
+                    <div class="formula-block">\(\sin \varphi = \frac{|\vec{a} \cdot \vec{n}|}{|\vec{a}| \cdot |\vec{n}|}\) — угол между прямой и плоскостью</div>
+                    <div class="formula-block">\(\cos \varphi = \frac{|\vec{n_1} \cdot \vec{n_2}|}{|\vec{n_1}| \cdot |\vec{n_2}|}\) — угол между плоскостями</div>
+                </div>
+
+                <div class="theory-block">
+                    <h2>5. Расстояние между скрещивающимися прямыми</h2>
+                    <div class="formula-block">\(\displaystyle \rho = \frac{|(\vec{a} \cdot [\vec{b} \times \vec{c}])|}{|\vec{a} \times \vec{b}|}\)</div>
+                </div>
+
+                <div class="theory-block">
+                    <h2>6. Площади и объёмы</h2>
+                    <div class="formula-block">\(S_{\text{пар}} = |\vec{a} \times \vec{b}|\)</div>
+                    <div class="formula-block">\(S_{\triangle} = \frac{1}{2} |\vec{a} \times \vec{b}|\)</div>
+                    <div class="formula-block">\(V_{\text{пар}} = |\vec{a} \cdot [\vec{b} \times \vec{c}]|\)</div>
+                    <div class="formula-block">\(V_{\text{тетр}} = \frac{| \vec{a} \cdot [\vec{b} \times \vec{c}] |}{6}\)</div>
+                </div>
+
+                <div class="theory-block">
+                    <h2>7. Окружность и сфера</h2>
+                    <div class="formula-block">\((x-x_0)^2 + (y-y_0)^2 = R^2\)</div>
+                    <div class="formula-block">\((x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2 = R^2\)</div>
+                </div>
+
+                <div class="theory-block">
+                    <h2>8. Прямая на плоскости</h2>
+                    <div class="formula-block">\(y = kx + b,\quad k = \frac{y_2-y_1}{x_2-x_1}\)</div>
+                    <div class="formula-block">\(Ax + By + C = 0\)</div>
+                    <div class="formula-block">\(\displaystyle d = \frac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}}\)</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

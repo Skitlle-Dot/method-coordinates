@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 17 - Сложная планиметрия | Метод координат</title>
+    <link rel="stylesheet" href="../../style.css?v=3">
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>🔷 Задание 17</h1>
+            <p class="subtitle">Планиметрия высокого уровня</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Главная</a></li>
+                <li><a href="../../tasks.html">📝 Задачи</a></li>
+                <li><a href="../../theory.html">📚 Теория</a></li>
+                <li><a href="../../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="back-button-container">
+                <a href="index.html" class="back-button">← Назад к списку заданий</a>
+            </div>
+
+            <div class="theory-full">
+                <div class="theory-block">
+                    <h2>📌 Когда применяется метод координат</h2>
+                    <ul>
+                        <li>Задачи с многоугольниками, где можно ввести систему координат</li>
+                        <li>Доказательство свойств фигур</li>
+                        <li>Нахождение геометрических мест точек</li>
+                    </ul>
+                </div>
+
+                <div class="theory-block">
+                    <h2>⚙️ Алгоритм решения</h2>
+                    
+                    <h3>Шаг 1. Введение системы координат</h3>
+                    <ul>
+                        <li>Используем симметрию фигуры</li>
+                        <li>Помещаем начало в удобную точку (вершину, центр симметрии)</li>
+                        <li>Оси направляем по осям симметрии или сторонам</li>
+                    </ul>
+
+                    <h3>Шаг 2. Запись координат вершин</h3>
+                    <div class="formula-text">Для прямоугольных фигур: координаты через длины сторон</div>
+                    <div class="formula-text">Для ромба: A(0;a), B(b;0), C(0;-a), D(-b;0)</div>
+                    <div class="formula-text">Для равнобедренного треугольника: A(0;0), B(c;0), C(c/2; h)</div>
+
+                    <h3>Шаг 3. Выражение условия задачи</h3>
+                    <p>Записываем в координатной форме то, что нужно доказать или найти:</p>
+                    <div class="formula-text">Перпендикулярность: (вектор1)·(вектор2) = 0</div>
+                    <div class="formula-text">Равенство длин: |AB| = |CD|</div>
+                    <div class="formula-text">Принадлежность точки прямой: уравнение прямой</div>
+
+                    <h3>Шаг 4. Алгебраические преобразования</h3>
+                    <p>Раскрываем скобки, упрощаем выражения. Используем свойства координат.</p>
+
+                    <h3>Шаг 5. Получение результата</h3>
+                    <p>Делаем вывод из полученных равенств или неравенств.</p>
+                </div>
+
+                <div class="theory-block">
+                    <h2>📖 Пример</h2>
+                    <p><strong>Условие:</strong> В квадрате ABCD точки M и N — середины сторон AB и BC. Докажите, что CM ⟂ DN.</p>
+                    <p><strong>Решение:</strong><br>
+                    A(0;0), B(1;0), C(1;1), D(0;1), M(0,5;0), N(1;0,5)<br>
+                    CM = M − C = (-0,5; -1), DN = N − D = (1; -0,5)<br>
+                    CM·DN = (-0,5)·1 + (-1)·(-0,5) = -0,5 + 0,5 = 0 ⇒ CM ⟂ DN</p>
+                    <p><strong>Ответ:</strong> Доказано.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 16.18 - Метод координат</title>
+    <link rel="stylesheet" href="../style.css?v=6">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>📝 Задание 16.18</h1>
+            <p class="subtitle">Задача по методу координат</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../tasks.html">📝 Задачи</a></li>
+                <li><a href="../theory.html">📚 Теория</a></li>
+                <li><a href="../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="task-page">
+                <div class="task-condition">
+                    <h3>📖 Условие</h3>
+                    <div class="task-text" style="line-height: 1.8; white-space: normal;">Две точки движутся по окружности радиуса 1 с постоянными угловыми скоростями. Первая точка начинает движение из точки (1; 0) с угловой скоростью 1 рад/с. Вторая точка начинает движение из точки (-1; 0) с угловой скоростью 2 рад/с в том же направлении. Найдите момент времени \(t > 0\), когда расстояние между точками минимально.</div>
+                </div>
+
+                <div class="task-buttons">
+                    <button class="task-button answer" onclick="showAnswer()">🔍 Ответ</button>
+                    <button class="task-button solution" onclick="showSolution()">📚 Разбор</button>
+                    <button class="task-button" onclick="window.history.back()">🔙 Назад</button>
+                </div>
+
+                <div id="answer" class="task-result">
+                    <h3>✅ Ответ</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">\(\pi\) секунд</div>
+                </div>
+
+                <div id="solution" class="task-result">
+                    <h3>📖 Подробный разбор</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">1. Параметрические уравнения движения:<br>
+   Первая точка: \(x_1(t) = \cos t\), \(y_1(t) = \sin t\)<br>
+   Вторая точка: \(x_2(t) = -\cos(2t)\), \(y_2(t) = -\sin(2t)\)<br>
+<br>
+2. Квадрат расстояния:<br>
+   \(\Delta x = \cos t + \cos(2t)\)<br>
+   \(\Delta y = \sin t + \sin(2t)\)<br>
+   \(d^2(t) = (\cos t + \cos(2t))^2 + (\sin t + \sin(2t))^2\)<br>
+<br>
+3. Используем формулы сложения:<br>
+   \(d^2(t) = \cos^2 t + \cos^2(2t) + 2\cos t \cos(2t) + \sin^2 t + \sin^2(2t) + 2\sin t \sin(2t)\)<br>
+   \(d^2(t) = (\cos^2 t + \sin^2 t) + (\cos^2(2t) + \sin^2(2t)) + 2(\cos t \cos(2t) + \sin t \sin(2t))\)<br>
+   \(d^2(t) = 1 + 1 + 2\cos(t - 2t) = 2 + 2\cos(-t) = 2 + 2\cos t\)<br>
+<br>
+4. Минимальное значение \(d^2(t)\) достигается при \(\cos t = -1\), то есть \(t = \pi\) с<br>
+<br>
+5. Минимальное расстояние: \(d_{min} = \sqrt{2 + 2(-1)} = 0\) (точки встречаются)</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

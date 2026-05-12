@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 8 - Производная | Метод координат</title>
+    <link rel="stylesheet" href="../../style.css?v=3">
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>📈 Задание 8</h1>
+            <p class="subtitle">Геометрический смысл производной</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Главная</a></li>
+                <li><a href="../../tasks.html">📝 Задачи</a></li>
+                <li><a href="../../theory.html">📚 Теория</a></li>
+                <li><a href="../../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="back-button-container">
+                <a href="index.html" class="back-button">← Назад к списку заданий</a>
+            </div>
+
+            <div class="theory-full">
+                <div class="theory-block">
+                    <h2>📌 Когда применяется метод координат</h2>
+                    <ul>
+                        <li>Задачи с касательной к графику функции</li>
+                        <li>Нахождение углового коэффициента касательной</li>
+                        <li>Составление уравнения касательной</li>
+                    </ul>
+                </div>
+
+                <div class="theory-block">
+                    <h2>⚙️ Алгоритм решения</h2>
+                    
+                    <h3>Шаг 1. Нахождение производной</h3>
+                    <div class="formula-text">f'(x) — производная функции</div>
+
+                    <h3>Шаг 2. Геометрический смысл производной</h3>
+                    <div class="formula-text">В точке x₀ значение производной равно угловому коэффициенту касательной: k = f'(x₀)</div>
+
+                    <h3>Шаг 3. Уравнение касательной</h3>
+                    <div class="formula-text">y = f'(x₀)(x − x₀) + f(x₀)</div>
+
+                    <h3>Шаг 4. Условие касания</h3>
+                    <p>Если прямая y = kx + b является касательной, то:</p>
+                    <div class="formula-text">f'(x₀) = k</div>
+                    <div class="formula-text">f(x₀) = k·x₀ + b</div>
+
+                    <h3>Шаг 5. Решение системы уравнений</h3>
+                    <p>Находим x₀ и неизвестные параметры.</p>
+                </div>
+
+                <div class="theory-block">
+                    <h2>📖 Пример</h2>
+                    <p><strong>Условие:</strong> Прямая y = 4x + 8 параллельна касательной к графику функции y = x² − 5x + 7. Найдите абсциссу точки касания.</p>
+                    <p><strong>Решение:</strong><br>
+                    f'(x) = 2x − 5<br>
+                    Условие параллельности: f'(x₀) = 4<br>
+                    2x₀ − 5 = 4 ⇒ 2x₀ = 9 ⇒ x₀ = 4,5</p>
+                    <p><strong>Ответ:</strong> 4,5</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

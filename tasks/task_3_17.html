@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3.17 - Метод координат</title>
+    <link rel="stylesheet" href="../style.css?v=6">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>📝 Задание 3.17</h1>
+            <p class="subtitle">Задача по методу координат</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../tasks.html">📝 Задачи</a></li>
+                <li><a href="../theory.html">📚 Теория</a></li>
+                <li><a href="../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="task-page">
+                <div class="task-condition">
+                    <h3>📖 Условие</h3>
+                    <div class="task-text" style="line-height: 1.8; white-space: normal;">В правильной треугольной призме ABCA₁B₁C₁ все ребра равны 1. Найдите расстояние от точки A до прямой BC₁.</div>
+                </div>
+
+                <div class="task-buttons">
+                    <button class="task-button answer" onclick="showAnswer()">🔍 Ответ</button>
+                    <button class="task-button solution" onclick="showSolution()">📚 Разбор</button>
+                    <button class="task-button" onclick="window.history.back()">🔙 Назад</button>
+                </div>
+
+                <div id="answer" class="task-result">
+                    <h3>✅ Ответ</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">\(\dfrac{\sqrt{14}}{4}\)</div>
+                </div>
+
+                <div id="solution" class="task-result">
+                    <h3>📖 Подробный разбор</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">1. Вводим систему координат: A(0;0;0), B(1;0;0), C(½; √3/2; 0), A₁(0;0;1), B₁(1;0;1), C₁(½; √3/2; 1)<br>
+<br>
+2. Направляющий вектор прямой BC₁:<br>
+   \(\vec{p} = \overrightarrow{BC₁} = (½ - 1; √3/2 - 0; 1 - 0) = (-½; √3/2; 1)\)<br>
+<br>
+3. Вектор от точки B до A:<br>
+   \(\overrightarrow{BA} = (0-1; 0-0; 0-0) = (-1; 0; 0)\)<br>
+<br>
+4. Векторное произведение:<br>
+   \(\vec{p} × \overrightarrow{BA} = \begin{vmatrix} \vec{i} & \vec{j} & \vec{k} \\ -½ & √3/2 & 1 \\ -1 & 0 & 0 \end{vmatrix} = (0; -1; √3/2)\)<br>
+<br>
+5. Длина произведения:<br>
+   \(|\vec{p} × \overrightarrow{BA}| = √\left(0 + 1 + \dfrac{3}{4}\right) = √\left(\dfrac{7}{4}\right) = \dfrac{√7}{2}\)<br>
+<br>
+6. Длина направляющего вектора:<br>
+   \(|\vec{p}| = √\left(\dfrac{1}{4} + \dfrac{3}{4} + 1\right) = √2\)<br>
+<br>
+7. Расстояние:<br>
+   \(d = \dfrac{√7/2}{√2} = \dfrac{√7}{2√2} = \dfrac{√14}{4}\)</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

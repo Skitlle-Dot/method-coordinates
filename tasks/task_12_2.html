@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 12.2 - Метод координат</title>
+    <link rel="stylesheet" href="../style.css?v=6">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>📝 Задание 12.2</h1>
+            <p class="subtitle">Задача по методу координат</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../tasks.html">📝 Задачи</a></li>
+                <li><a href="../theory.html">📚 Теория</a></li>
+                <li><a href="../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="task-page">
+                <div class="task-condition">
+                    <h3>📖 Условие</h3>
+                    <div class="task-text" style="line-height: 1.8; white-space: normal;">Из точки \(A(0;5)\) на параболу \(y = \dfrac{x^2}{4}\) бросили мяч. Найдите абсциссу точки приземления \(M\), при которой длина траектории (расстояние \(AM\)) будет наименьшей.</div>
+                </div>
+
+                <div class="task-buttons">
+                    <button class="task-button answer" onclick="showAnswer()">🔍 Ответ</button>
+                    <button class="task-button solution" onclick="showSolution()">📚 Разбор</button>
+                    <button class="task-button" onclick="window.history.back()">🔙 Назад</button>
+                </div>
+
+                <div id="answer" class="task-result">
+                    <h3>✅ Ответ</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">\(2\sqrt{3}\)</div>
+                </div>
+
+                <div id="solution" class="task-result">
+                    <h3>📖 Подробный разбор</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">1. Пусть точка \(M\) имеет координаты \(\left(t; \dfrac{t^2}{4}\right)\)<br>
+<br>
+2. Квадрат расстояния между \(A\) и \(M\):<br>
+   \(d^2(t) = (t - 0)^2 + \left(\dfrac{t^2}{4} - 5\right)^2 = t^2 + \dfrac{t^4}{16} - \dfrac{5t^2}{2} + 25 = \dfrac{t^4}{16} - \dfrac{3t^2}{2} + 25\)<br>
+<br>
+3. Находим производную:<br>
+   \(f'(t) = \dfrac{4t^3}{16} - 3t = \dfrac{t^3}{4} - 3t = t\left(\dfrac{t^2}{4} - 3\right)\)<br>
+<br>
+4. Приравниваем к нулю:<br>
+   \(t = 0\) или \(\dfrac{t^2}{4} = 3 \Rightarrow t^2 = 12 \Rightarrow t = \pm 2\sqrt{3}\)<br>
+<br>
+5. Вычисляем квадрат расстояния для \(t = 2\sqrt{3}\):<br>
+   \(d^2 = \dfrac{(2\sqrt{3})^4}{16} - \dfrac{3\cdot(2\sqrt{3})^2}{2} + 25 = \dfrac{144}{16} - \dfrac{36}{2} + 25 = 9 - 18 + 25 = 16\)<br>
+   Для \(t = 0\): \(d^2 = 25\)<br>
+<br>
+6. Минимум достигается при \(t = 2\sqrt{3}\)</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

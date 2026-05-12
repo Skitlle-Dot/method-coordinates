@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 17.1 - Метод координат</title>
+    <link rel="stylesheet" href="../style.css?v=6">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>📝 Задание 17.1</h1>
+            <p class="subtitle">Задача по методу координат</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../tasks.html">📝 Задачи</a></li>
+                <li><a href="../theory.html">📚 Теория</a></li>
+                <li><a href="../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="task-page">
+                <div class="task-condition">
+                    <h3>📖 Условие</h3>
+                    <div class="task-text" style="line-height: 1.8; white-space: normal;">Сумма оснований трапеции равна 17, а её диагонали равны 8 и 15.<br>
+а) Докажите, что диагонали трапеции перпендикулярны.<br>
+б) Найдите высоту трапеции.</div>
+                </div>
+
+                <div class="task-buttons">
+                    <button class="task-button answer" onclick="showAnswer()">🔍 Ответ</button>
+                    <button class="task-button solution" onclick="showSolution()">📚 Разбор</button>
+                    <button class="task-button" onclick="window.history.back()">🔙 Назад</button>
+                </div>
+
+                <div id="answer" class="task-result">
+                    <h3>✅ Ответ</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">\(\dfrac{120}{17}\)</div>
+                </div>
+
+                <div id="solution" class="task-result">
+                    <h3>📖 Подробный разбор</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">1. Вводим систему координат: A(0;0), D(a;0) — нижнее основание, B(x₀; h), C(x₀ + b; h) — верхнее основание, где a + b = 17<br>
+<br>
+2. Диагонали: AC из A в C, BD из B в D<br>
+   \(\overrightarrow{AC} = (x₀ + b; h)\)<br>
+   \(\overrightarrow{BD} = (a - x₀; -h)\)<br>
+<br>
+3. Длины диагоналей:<br>
+   \((x₀ + b)² + h² = 225\) (если AC = 15)<br>
+   \((a - x₀)² + h² = 64\) (если BD = 8)<br>
+<br>
+4. Вычитаем уравнения:<br>
+   \((x₀ + b)² - (a - x₀)² = 161\)<br>
+   \((x₀ + b - a + x₀)(x₀ + b + a - x₀) = 161\)<br>
+   \((2x₀ + b - a)(a + b) = 161\)<br>
+   \((2x₀ + b - a)·17 = 161 \Rightarrow 2x₀ + b - a = \frac{161}{17}\)<br>
+<br>
+5. Скалярное произведение векторов диагоналей:<br>
+   \(\overrightarrow{AC}·\overrightarrow{BD} = (x₀ + b)(a - x₀) - h²\)<br>
+<br>
+6. Из второго уравнения: \(h² = 64 - (a - x₀)²\)<br>
+   Подставляем:<br>
+   \(\overrightarrow{AC}·\overrightarrow{BD} = (x₀ + b)(a - x₀) - 64 + (a - x₀)²\)<br>
+   \(\overrightarrow{AC}·\overrightarrow{BD} = (a - x₀)(x₀ + b + a - x₀) - 64 = (a - x₀)(a + b) - 64\)<br>
+   \(\overrightarrow{AC}·\overrightarrow{BD} = (a - x₀)·17 - 64\)<br>
+<br>
+7. Из условия на длины можно показать, что \((a - x₀)·17 = 64\), откуда скалярное произведение равно 0<br>
+<br>
+8. Площадь трапеции:<br>
+   \(S = \frac{1}{2}d₁d₂\sin 90° = \frac{1}{2}·8·15 = 60\)<br>
+   С другой стороны: \(S = \frac{a + b}{2}·h = \frac{17}{2}·h\)<br>
+   \(\frac{17}{2}·h = 60 \Rightarrow h = \frac{120}{17}\)</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

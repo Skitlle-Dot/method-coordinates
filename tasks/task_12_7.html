@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 12.7 - Метод координат</title>
+    <link rel="stylesheet" href="../style.css?v=6">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>📝 Задание 12.7</h1>
+            <p class="subtitle">Задача по методу координат</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../tasks.html">📝 Задачи</a></li>
+                <li><a href="../theory.html">📚 Теория</a></li>
+                <li><a href="../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="task-page">
+                <div class="task-condition">
+                    <h3>📖 Условие</h3>
+                    <div class="task-text" style="line-height: 1.8; white-space: normal;">Из точки \(A(0;2)\) проведён отрезок к точке \(B\) на параболе \(y = x^2\). Длина этого отрезка равна 5. Найдите все возможные координаты точки \(B\).</div>
+                </div>
+
+                <div class="task-buttons">
+                    <button class="task-button answer" onclick="showAnswer()">🔍 Ответ</button>
+                    <button class="task-button solution" onclick="showSolution()">📚 Разбор</button>
+                    <button class="task-button" onclick="window.history.back()">🔙 Назад</button>
+                </div>
+
+                <div id="answer" class="task-result">
+                    <h3>✅ Ответ</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">\(\left(\pm \sqrt{\dfrac{3 + \sqrt{93}}{2}} ; \dfrac{3 + \sqrt{93}}{2}\right)\)</div>
+                </div>
+
+                <div id="solution" class="task-result">
+                    <h3>📖 Подробный разбор</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">1. Пусть \(B(t; t^2)\)<br>
+<br>
+2. Квадрат расстояния \(AB\) равен 25:<br>
+   \(t^2 + (t^2 - 2)^2 = 25\)<br>
+   \(t^2 + t^4 - 4t^2 + 4 = 25\)<br>
+   \(t^4 - 3t^2 - 21 = 0\)<br>
+<br>
+3. Замена \(u = t^2 \ge 0\):<br>
+   \(u^2 - 3u - 21 = 0\)<br>
+   \(u = \dfrac{3 \pm \sqrt{9 + 84}}{2} = \dfrac{3 \pm \sqrt{93}}{2}\)<br>
+<br>
+4. Корень \(\dfrac{3 - \sqrt{93}}{2}\) отрицательный, не подходит<br>
+<br>
+5. \(u = \dfrac{3 + \sqrt{93}}{2}\), тогда \(t = \pm \sqrt{\dfrac{3 + \sqrt{93}}{2}}\)<br>
+<br>
+6. Координаты точки \(B\):<br>
+   \(x = \pm \sqrt{\dfrac{3 + \sqrt{93}}{2}}\), \(y = \dfrac{3 + \sqrt{93}}{2}\)</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

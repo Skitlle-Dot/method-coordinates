@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 14 - Сложная стереометрия | Метод координат</title>
+    <link rel="stylesheet" href="../../style.css?v=3">
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>🏔️ Задание 14</h1>
+            <p class="subtitle">Стереометрическая задача (сложные случаи)</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Главная</a></li>
+                <li><a href="../../tasks.html">📝 Задачи</a></li>
+                <li><a href="../../theory.html">📚 Теория</a></li>
+                <li><a href="../../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="back-button-container">
+                <a href="index.html" class="back-button">← Назад к списку заданий</a>
+            </div>
+
+            <div class="theory-full">
+                <div class="theory-block">
+                    <h2>📌 Когда применяется метод координат</h2>
+                    <ul>
+                        <li>Угол между прямыми</li>
+                        <li>Угол между прямой и плоскостью</li>
+                        <li>Угол между плоскостями</li>
+                        <li>Расстояние от точки до плоскости</li>
+                        <li>Расстояние между скрещивающимися прямыми</li>
+                    </ul>
+                </div>
+
+                <div class="theory-block">
+                    <h2>⚙️ Алгоритм решения</h2>
+                    
+                    <h3>Шаг 1. Введение системы координат</h3>
+                    <p>Выбираем удобное расположение (как в задании 3).</p>
+
+                    <h3>Шаг 2. Запись координат всех точек</h3>
+                    <p>Находим координаты всех упомянутых точек.</p>
+
+                    <h3>Шаг 3. Угол между прямыми</h3>
+                    <div class="formula-text">cos φ = |p·q| / (|p|·|q|)</div>
+
+                    <h3>Шаг 4. Угол между прямой и плоскостью</h3>
+                    <div class="formula-text">sin φ = |a·n| / (|a|·|n|)</div>
+
+                    <h3>Шаг 5. Угол между плоскостями</h3>
+                    <div class="formula-text">cos φ = |n₁·n₂| / (|n₁|·|n₂|)</div>
+
+                    <h3>Шаг 6. Расстояние от точки до плоскости</h3>
+                    <div class="formula-text">Составляем уравнение плоскости Ax + By + Cz + D = 0</div>
+                    <div class="formula-text">d = |Ax₀ + By₀ + Cz₀ + D| / √(A² + B² + C²)</div>
+
+                    <h3>Шаг 7. Расстояние между скрещивающимися прямыми</h3>
+                    <div class="formula-text">ρ = |(a·[b×c])| / |a×b|</div>
+                </div>
+
+                <div class="theory-block">
+                    <h2>📖 Пример</h2>
+                    <p><strong>Условие:</strong> В кубе ABCDA₁B₁C₁D₁ с ребром 1 найдите расстояние между прямыми AB₁ и BC₁.</p>
+                    <p><strong>Решение:</strong><br>
+                    A(0;0;0), B₁(1;0;1), B(1;0;0), C₁(1;1;1)<br>
+                    p = AB₁ = {1;0;1}, q = BC₁ = {0;1;1}, c = AB = {1;0;0}<br>
+                    Смешанное произведение = 1, |p×q| = √3 ⇒ d = 1/√3 = √3/3</p>
+                    <p><strong>Ответ:</strong> √3/3</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

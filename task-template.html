@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание {номер} - Метод координат</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Задание {номер}</h1>
+            <p class="subtitle">{название}</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../tasks.html">📝 Задачи</a></li>
+                <li><a href="../theory.html">📚 Теория</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="task-page">
+                <div class="task-header">
+                    <h2>Задача {номер}.{индекс}</h2>
+                </div>
+
+                <div class="task-condition">
+                    <h3>Условие</h3>
+                    <p>{условие}</p>
+                </div>
+
+                <div class="task-buttons">
+                    <button class="task-button answer" onclick="showAnswer()">🔍 Ответ</button>
+                    <button class="task-button solution" onclick="showSolution()">📚 Разбор</button>
+                </div>
+
+                <div id="answer" class="task-result">
+                    <h3>Ответ</h3>
+                    <div class="task-result-content">{ответ}</div>
+                </div>
+
+                <div id="solution" class="task-result">
+                    <h3>Разбор</h3>
+                    <div class="task-result-content">{решение}</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2026 Овчинников Кирилл. Проект для защиты в ЧелГУ.</p>
+        </footer>
+    </div>
+
+    <script>
+        function showAnswer() {
+            document.getElementById('answer').classList.add('show');
+            document.getElementById('solution').classList.remove('show');
+        }
+
+        function showSolution() {
+            document.getElementById('solution').classList.add('show');
+            document.getElementById('answer').classList.remove('show');
+        }
+    </script>
+</body>
+</html>

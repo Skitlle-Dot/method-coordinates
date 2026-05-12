@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 16.20 - Метод координат</title>
+    <link rel="stylesheet" href="../style.css?v=6">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>📝 Задание 16.20</h1>
+            <p class="subtitle">Задача по методу координат</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../tasks.html">📝 Задачи</a></li>
+                <li><a href="../theory.html">📚 Теория</a></li>
+                <li><a href="../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="task-page">
+                <div class="task-condition">
+                    <h3>📖 Условие</h3>
+                    <div class="task-text" style="line-height: 1.8; white-space: normal;">Два корабля выходят из порта одновременно. Первый идёт на север со скоростью 30 км/ч, второй — на восток со скоростью 40 км/ч. Через 2 часа первый поворачивает на восток и идёт с той же скоростью. Найдите минимальное расстояние между кораблями после момента поворота.</div>
+                </div>
+
+                <div class="task-buttons">
+                    <button class="task-button answer" onclick="showAnswer()">🔍 Ответ</button>
+                    <button class="task-button solution" onclick="showSolution()">📚 Разбор</button>
+                    <button class="task-button" onclick="window.history.back()">🔙 Назад</button>
+                </div>
+
+                <div id="answer" class="task-result">
+                    <h3>✅ Ответ</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">100 км</div>
+                </div>
+
+                <div id="solution" class="task-result">
+                    <h3>📖 Подробный разбор</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">1. Вводим систему координат: порт в начале координат, ось X на восток, ось Y на север<br>
+<br>
+2. До поворота (первые 2 часа):<br>
+   Первый: \((0; 30t)\) при \(t \le 2\)<br>
+   Второй: \((40t; 0)\)<br>
+<br>
+3. В момент \(t = 2\):<br>
+   Первый: \((0; 60)\)<br>
+   Второй: \((80; 0)\)<br>
+<br>
+4. После поворота (для \(t \ge 2\) вводим новое время \(\tau = t - 2 \ge 0\)):<br>
+   Первый начинает из \((0; 60)\) и движется на восток со скоростью 30 км/ч:<br>
+   \(x_1(\tau) = 30\tau\), \(y_1(\tau) = 60\)<br>
+   Второй продолжает движение на восток:<br>
+   \(x_2(\tau) = 80 + 40\tau\), \(y_2(\tau) = 0\)<br>
+<br>
+5. Квадрат расстояния:<br>
+   \(\Delta x = 30\tau - (80 + 40\tau) = -80 - 10\tau\)<br>
+   \(\Delta y = 60 - 0 = 60\)<br>
+   \(d^2(\tau) = (80 + 10\tau)^2 + 60^2 = 6400 + 1600\tau + 100\tau^2 + 3600 = 100\tau^2 + 1600\tau + 10000\)<br>
+<br>
+6. Вершина параболы при \(\tau_{min} = -\dfrac{1600}{2 \cdot 100} = -8\) — отрицательное, значит минимум при \(\tau = 0\)<br>
+<br>
+7. Минимальное расстояние после поворота:<br>
+   \(d_{min} = \sqrt{6400 + 3600} = \sqrt{10000} = 100\) км</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

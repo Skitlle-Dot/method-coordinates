@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 14.3 - Метод координат</title>
+    <link rel="stylesheet" href="../style.css?v=6">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>📝 Задание 14.3</h1>
+            <p class="subtitle">Задача по методу координат</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../tasks.html">📝 Задачи</a></li>
+                <li><a href="../theory.html">📚 Теория</a></li>
+                <li><a href="../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="task-page">
+                <div class="task-condition">
+                    <h3>📖 Условие</h3>
+                    <div class="task-text" style="line-height: 1.8; white-space: normal;">\(В правильной четырёхугольной призме ABCDA₁B₁C₁D₁ сторона AB основания равна 8, а боковое ребро AA₁ равно 4\sqrt\{2\}. На рёбрах BC и C₁D₁ отмечены точки K и L соответственно, причём BK = C₁L = 2. Плоскость \gamma параллельна прямой BD и содержит точки K и L.\)<br>
+\(а) Докажите, что прямая CA₁ перпендикулярна плоскости \gamma.\)<br>
+\(б) Найдите расстояние от точки B₁ до плоскости \gamma.\)</div>
+                </div>
+
+                <div class="task-buttons">
+                    <button class="task-button answer" onclick="showAnswer()">🔍 Ответ</button>
+                    <button class="task-button solution" onclick="showSolution()">📚 Разбор</button>
+                    <button class="task-button" onclick="window.history.back()">🔙 Назад</button>
+                </div>
+
+                <div id="answer" class="task-result">
+                    <h3>✅ Ответ</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">\(\dfrac{6\sqrt{10}}{5}\)</div>
+                </div>
+
+                <div id="solution" class="task-result">
+                    <h3>📖 Подробный разбор</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">1. Вводим систему координат: B(0;0;0), A(8;0;0), C(0;8;0), D(8;8;0), B₁(0;0;4√2), C₁(0;8;4√2), D₁(8;8;4√2)<br>
+<br>
+2. Находим координаты точек:<br>
+   K(0; 2; 0)<br>
+   L(2; 8; 4√2)<br>
+<br>
+3. Находим нормаль к плоскости γ. Через K и L и прямую, параллельную BD, строим плоскость.<br>
+   Нормаль: \(\vec{n} = (-\sqrt{2}; \sqrt{2}; -1)\)<br>
+<br>
+4. Вектор \(\overrightarrow{CA₁} = (8; -8; 4√2)\). Проверяем коллинеарность:<br>
+   \(\dfrac{8}{-\sqrt{2}} = \dfrac{-8}{\sqrt{2}} = \dfrac{4√2}{-1} = -4√2\)<br>
+   Векторы коллинеарны, значит CA₁ ⟂ γ<br>
+<br>
+5. Уравнение плоскости γ: \(\sqrt{2}x - \sqrt{2}y + z + 2\sqrt{2} = 0\)<br>
+<br>
+6. Расстояние от B₁(0;0;4√2) до плоскости:<br>
+   \(d = \dfrac{|0 - 0 + 4√2 + 2√2|}{\sqrt{2 + 2 + 1}} = \dfrac{6√2}{√5} = \dfrac{6√{10}}{5}\)</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

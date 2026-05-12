@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 12 - Экстремумы | Метод координат</title>
+    <link rel="stylesheet" href="../../style.css?v=3">
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>📊 Задание 12</h1>
+            <p class="subtitle">Наибольшее и наименьшее значение</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Главная</a></li>
+                <li><a href="../../tasks.html">📝 Задачи</a></li>
+                <li><a href="../../theory.html">📚 Теория</a></li>
+                <li><a href="../../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="back-button-container">
+                <a href="index.html" class="back-button">← Назад к списку заданий</a>
+            </div>
+
+            <div class="theory-full">
+                <div class="theory-block">
+                    <h2>📌 Когда применяется метод координат</h2>
+                    <ul>
+                        <li>Задачи на нахождение минимального расстояния между точками</li>
+                        <li>Задачи на экстремум функции, связанной с расстоянием</li>
+                    </ul>
+                </div>
+
+                <div class="theory-block">
+                    <h2>⚙️ Алгоритм решения</h2>
+                    
+                    <h3>Шаг 1. Запись функции расстояния</h3>
+                    <div class="formula-text">Пусть точка A(x₀;y₀) и точка на кривой B(t; f(t))</div>
+                    <div class="formula-text">Квадрат расстояния: d²(t) = (t − x₀)² + (f(t) − y₀)²</div>
+
+                    <h3>Шаг 2. Исследование функции на минимум</h3>
+                    <div class="formula-text">Находим производную (d²)'(t)</div>
+                    <div class="formula-text">Приравниваем к нулю: (d²)'(t) = 0</div>
+                    <div class="formula-text">Находим критические точки</div>
+
+                    <h3>Шаг 3. Вычисление минимального значения</h3>
+                    <div class="formula-text">Подставляем найденные t в функцию расстояния</div>
+                    <div class="formula-text">Выбираем наименьшее значение</div>
+
+                    <h3>Шаг 4. Для функций на отрезке</h3>
+                    <div class="formula-text">Находим значения на концах отрезка</div>
+                    <div class="formula-text">Сравниваем со значениями в критических точках</div>
+                </div>
+
+                <div class="theory-block">
+                    <h2>📖 Пример</h2>
+                    <p><strong>Условие:</strong> Из точки A(0;5) на параболу y = x²/4 бросили мяч. Найдите абсциссу точки приземления M, при которой расстояние AM будет наименьшим.</p>
+                    <p><strong>Решение:</strong><br>
+                    M(t; t²/4)<br>
+                    d²(t) = t² + (t²/4 − 5)² = t² + t⁴/16 − 5t²/2 + 25 = t⁴/16 − 3t²/2 + 25<br>
+                    (d²)' = t³/4 − 3t = t(t²/4 − 3) = 0 ⇒ t = 2√3<br>
+                    <strong>Ответ:</strong> 2√3</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

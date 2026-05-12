@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 16.4 - Метод координат</title>
+    <link rel="stylesheet" href="../style.css?v=6">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>📝 Задание 16.4</h1>
+            <p class="subtitle">Задача по методу координат</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../tasks.html">📝 Задачи</a></li>
+                <li><a href="../theory.html">📚 Теория</a></li>
+                <li><a href="../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="task-page">
+                <div class="task-condition">
+                    <h3>📖 Условие</h3>
+                    <div class="task-text" style="line-height: 1.8; white-space: normal;">Из двух городов A и B, расстояние между которыми по прямой равно 300 км, одновременно навстречу друг другу вылетают два самолёта. Самолёт из A летит со скоростью 400 км/ч под углом 30° к линии AB, самолёт из B летит со скоростью 500 км/ч под углом 60° к линии AB (углы отсчитываются от линии AB в одну и ту же сторону). Найдите минимальное расстояние, на которое сблизятся самолёты.</div>
+                </div>
+
+                <div class="task-buttons">
+                    <button class="task-button answer" onclick="showAnswer()">🔍 Ответ</button>
+                    <button class="task-button solution" onclick="showSolution()">📚 Разбор</button>
+                    <button class="task-button" onclick="window.history.back()">🔙 Назад</button>
+                </div>
+
+                <div id="answer" class="task-result">
+                    <h3>✅ Ответ</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">300 км</div>
+                </div>
+
+                <div id="solution" class="task-result">
+                    <h3>📖 Подробный разбор</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">1. Вводим систему координат: начало в A, ось X направлена к B. Точка B имеет координату 300<br>
+<br>
+2. Проекции скоростей:<br>
+   Самолёт из A: \(v_{Ax} = 400\cos 30° = 200\sqrt{3}\), \(v_{Ay} = 400\sin 30° = 200\)<br>
+   Самолёт из B: \(v_{Bx} = -500\cos 60° = -250\), \(v_{By} = 500\sin 60° = 250\sqrt{3}\)<br>
+<br>
+3. Уравнения движения:<br>
+   \(x_A(t) = 200\sqrt{3}t\), \(y_A(t) = 200t\)<br>
+   \(x_B(t) = 300 - 250t\), \(y_B(t) = 250\sqrt{3}t\)<br>
+<br>
+4. Квадрат расстояния:<br>
+   \(\Delta x = 200\sqrt{3}t - 300 + 250t = 300 + t(250 + 200\sqrt{3})\)<br>
+   \(\Delta y = 200t - 250\sqrt{3}t = t(200 - 250\sqrt{3})\)<br>
+<br>
+5. После преобразований получаем \(d^2(t) = (a^2 + b^2)t^2 + 600a t + 90000\), где \(a = 250 + 200\sqrt{3}\), \(b = 200 - 250\sqrt{3}\)<br>
+<br>
+6. Вершина параболы при отрицательном t, значит при \(t \ge 0\) функция возрастает, минимум при \(t = 0\)</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

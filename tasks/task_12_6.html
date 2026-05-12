@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 12.6 - Метод координат</title>
+    <link rel="stylesheet" href="../style.css?v=6">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>📝 Задание 12.6</h1>
+            <p class="subtitle">Задача по методу координат</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../tasks.html">📝 Задачи</a></li>
+                <li><a href="../theory.html">📚 Теория</a></li>
+                <li><a href="../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="task-page">
+                <div class="task-condition">
+                    <h3>📖 Условие</h3>
+                    <div class="task-text" style="line-height: 1.8; white-space: normal;">Найдите наименьшее расстояние между точками параболы \(y = x^2 - 2x + 2\) и прямой \(y = x - 3\).</div>
+                </div>
+
+                <div class="task-buttons">
+                    <button class="task-button answer" onclick="showAnswer()">🔍 Ответ</button>
+                    <button class="task-button solution" onclick="showSolution()">📚 Разбор</button>
+                    <button class="task-button" onclick="window.history.back()">🔙 Назад</button>
+                </div>
+
+                <div id="answer" class="task-result">
+                    <h3>✅ Ответ</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">\(\dfrac{11\sqrt{2}}{8}\)</div>
+                </div>
+
+                <div id="solution" class="task-result">
+                    <h3>📖 Подробный разбор</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">1. Точка на параболе: \(P(t; t^2 - 2t + 2)\)<br>
+<br>
+2. Расстояние от точки до прямой \(x - y - 3 = 0\):<br>
+   \(d(t) = \dfrac{|t - (t^2 - 2t + 2) - 3|}{\sqrt{1^2 + (-1)^2}} = \dfrac{| -t^2 + 3t - 5|}{\sqrt{2}}\)<br>
+<br>
+3. Дискриминант \(-t^2 + 3t - 5\): \(9 - 20 = -11 < 0\), выражение всегда отрицательно, поэтому модуль раскрывается с минусом:<br>
+   \(d(t) = \dfrac{t^2 - 3t + 5}{\sqrt{2}}\)<br>
+<br>
+4. Исследуем \(h(t) = t^2 - 3t + 5\). Минимум в вершине:<br>
+   \(t_{min} = -\dfrac{-3}{2} = 1,5\)<br>
+<br>
+5. Минимальное расстояние:<br>
+   \(d_{min} = \dfrac{1,5^2 - 3\cdot1,5 + 5}{\sqrt{2}} = \dfrac{2,25 - 4,5 + 5}{\sqrt{2}} = \dfrac{2,75}{\sqrt{2}} = \dfrac{11}{4\sqrt{2}} = \dfrac{11\sqrt{2}}{8}\)</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

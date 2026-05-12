@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 16.9 - Метод координат</title>
+    <link rel="stylesheet" href="../style.css?v=6">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>📝 Задание 16.9</h1>
+            <p class="subtitle">Задача по методу координат</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../tasks.html">📝 Задачи</a></li>
+                <li><a href="../theory.html">📚 Теория</a></li>
+                <li><a href="../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="task-page">
+                <div class="task-condition">
+                    <h3>📖 Условие</h3>
+                    <div class="task-text" style="line-height: 1.8; white-space: normal;">Из пункта A по прямой дороге выехал велосипедист со скоростью 20 км/ч. Одновременно из пункта B, находящегося на расстоянии 15 км от пункта A перпендикулярно дороге, выехал мотоциклист со скоростью 40 км/ч по дороге, перпендикулярной первой дороге (в сторону от A). Найдите минимальное расстояние между велосипедистом и мотоциклистом.</div>
+                </div>
+
+                <div class="task-buttons">
+                    <button class="task-button answer" onclick="showAnswer()">🔍 Ответ</button>
+                    <button class="task-button solution" onclick="showSolution()">📚 Разбор</button>
+                    <button class="task-button" onclick="window.history.back()">🔙 Назад</button>
+                </div>
+
+                <div id="answer" class="task-result">
+                    <h3>✅ Ответ</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">15 км</div>
+                </div>
+
+                <div id="solution" class="task-result">
+                    <h3>📖 Подробный разбор</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">1. Вводим систему координат: начало в A, ось X по дороге велосипедиста, ось Y перпендикулярно<br>
+<br>
+2. Координаты B: \((0; 15)\)<br>
+<br>
+3. Уравнения движения:<br>
+   Велосипедист: \(x_1(t) = 20t\), \(y_1(t) = 0\)<br>
+   Мотоциклист: \(x_2(t) = 40t\), \(y_2(t) = 15\)<br>
+<br>
+4. Квадрат расстояния:<br>
+   \(\Delta x = 20t - 40t = -20t\)<br>
+   \(\Delta y = -15\)<br>
+   \(d^2(t) = 400t^2 + 225\)<br>
+<br>
+5. Функция возрастает при \(t > 0\), минимум при \(t = 0\)</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

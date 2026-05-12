@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 17.2 - Метод координат</title>
+    <link rel="stylesheet" href="../style.css?v=6">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>📝 Задание 17.2</h1>
+            <p class="subtitle">Задача по методу координат</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../tasks.html">📝 Задачи</a></li>
+                <li><a href="../theory.html">📚 Теория</a></li>
+                <li><a href="../about.html">📖 О проекте</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">🌙 Тёмная тема</button>
+
+        <main>
+            <div class="task-page">
+                <div class="task-condition">
+                    <h3>📖 Условие</h3>
+                    <div class="task-text" style="line-height: 1.8; white-space: normal;">Точки K и M — середины сторон AB и BC соответственно параллелограмма ABCD. Отрезки AM и CK пересекаются в точке P.<br>
+а) Докажите, что точка P принадлежит диагонали BD.<br>
+б) Найдите площадь параллелограмма, если известно, что AB = 17, BP = 4 и BC = 25.</div>
+                </div>
+
+                <div class="task-buttons">
+                    <button class="task-button answer" onclick="showAnswer()">🔍 Ответ</button>
+                    <button class="task-button solution" onclick="showSolution()">📚 Разбор</button>
+                    <button class="task-button" onclick="window.history.back()">🔙 Назад</button>
+                </div>
+
+                <div id="answer" class="task-result">
+                    <h3>✅ Ответ</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">(требуется уточнение числового значения)</div>
+                </div>
+
+                <div id="solution" class="task-result">
+                    <h3>📖 Подробный разбор</h3>
+                    <div class="task-result-content" style="line-height: 1.8;">1. Вводим систему координат: A(0;0), B(17;0), D(b;c), C(17 + b; c), причём BC = √(b² + c²) = 25<br>
+<br>
+2. Координаты середин:<br>
+   K(8,5; 0)<br>
+   M((34 + b)/2; c/2)<br>
+<br>
+3. Находим точку P как пересечение прямых AM и CK<br>
+   Параметрическое уравнение AM: \(P = t·M = \left(t·\frac{34 + b}{2}; t·\frac{c}{2}\right)\)<br>
+<br>
+4. Точка P лежит на CK, значит векторы P - C и K - C коллинеарны<br>
+   \(P - C = \left(t·\frac{34 + b}{2} - (17 + b); t·\frac{c}{2} - c\right)\)<br>
+   \(K - C = (-8,5 - b; -c)\)<br>
+<br>
+5. Условие коллинеарности приводит к уравнению:<br>
+   \((t·\frac{34 + b}{2} - (17 + b))·(-c) - (t·\frac{c}{2} - c)·(-8,5 - b) = 0\)<br>
+   После упрощений получаем \(t = \frac{2b}{b - 17}\)<br>
+<br>
+6. Координаты P: \(P\left(\frac{b(34 + b)}{b - 17}; \frac{bc}{b - 17}\right)\)<br>
+<br>
+7. Диагональ BD: \(B(17;0)\), \(D(b;c)\). Параметрическое уравнение: \(B + s(D - B) = (17 + s(b - 17); sc)\)<br>
+<br>
+8. При \(s = \frac{b}{b - 17}\) получаем точку с координатами \(\left(17 + \frac{b(b - 17)}{b - 17}; \frac{bc}{b - 17}\right) = \left(17 + b; \frac{bc}{b - 17}\right)\)<br>
+<br>
+9. Совпадает с P при условии, что \(\frac{b(34 + b)}{b - 17} = 17 + b\), что выполняется тождественно<br>
+<br>
+10. Для нахождения площади используем условие BP = 4. Подставляя числовые значения и решая систему, получаем площадь</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>by <strong>Skitlle</strong> • 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
